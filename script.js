@@ -46,10 +46,12 @@ btn.addEventListener('click', () => {
 // Command-Handler Array
 const commands = [
     {
-        condition: msg => msg.includes('hey') || msg.includes('hello'),
-        action: () => speak("Hello Sir, How Can I Help You?")
+    condition: msg => msg.includes('hey') || msg.includes('hello'),
+    action: () => {
+        speak("Hello Sir, How Can I Help You?");
         wishMe();
-    },
+    }
+},
     {
         condition: msg => msg.includes("open google"),
         action: () => {
